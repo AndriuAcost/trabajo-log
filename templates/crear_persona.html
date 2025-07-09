@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Persona</title>
+</head>
+<body>
+    <h1>Crear Nueva Persona</h1>
+    <a href="{{ url_for('listar_personas') }}">Volver</a>
+    <form method="post">
+        <input type="text" name="nombre" placeholder="Nombre" required><br>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <button type="submit">Crear</button>
+    </form>
+</body>
+</html>

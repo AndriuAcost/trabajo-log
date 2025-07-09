@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Persona</title>
+</head>
+<body>
+    <h1>Editar Persona</h1>
+    <a href="{{ url_for('listar_personas') }}">Volver</a>
+    <form method="post">
+        <input type="text" name="nombre" value="{{ persona['nombre'] }}" required><br>
+        <input type="email" name="email" value="{{ persona['email'] }}" required><br>
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>

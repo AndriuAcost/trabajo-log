@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><title>Inicio</title></head>
+<body>
+    <h1>Bienvenido, {{ usuario }}</h1>
+    <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+    <h2>Registrar acción</h2>
+    <form action="{{ url_for('registrar') }}" method="post">
+        <input type="text" name="accion" placeholder="Describe la acción" required>
+        <button type="submit">Registrar</button>
+    </form>
+    <h2>Historial de acciones</h2>
+    <table border="1">
+        <tr><th>ID</th><th>Acción</th><th>Fecha</th></tr>
+        {% for log in logs %}
+        <tr>
+            <td>{{ log['id'] }}</td>
+            <td>{{ log['accion'] }}</td>
+            <td>{{ log['fecha'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <hr>
+    <a href="{{ url_for('listar_personas') }}">Gestionar Personas</a>
+</body>
+</html>

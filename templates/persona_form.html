@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><title>Personas</title></head>
+<body>
+    <h1>Lista de Personas</h1>
+    <a href="{{ url_for('index') }}">Inicio</a> | 
+    <a href="{{ url_for('crear_persona') }}">Crear Persona</a> | 
+    <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+
+    <table border="1">
+        <tr><th>ID</th><th>Nombre</th><th>Email</th><th>Acciones</th></tr>
+        {% for p in personas %}
+        <tr>
+            <td>{{ p['id'] }}</td>
+            <td>{{ p['nombre'] }}</td>
+            <td>{{ p['email'] }}</td>
+            <td>
+                <a href="{{ url_for('editar_persona', id=p['id']) }}">Editar</a> | 
+                <form action="{{ url_for('eliminar_persona', id=p['id']) }}" method="post" style="display:inline;">
+                    <button type="submit" onclick="return confirm('¿Seguro que quieres eliminar?');">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

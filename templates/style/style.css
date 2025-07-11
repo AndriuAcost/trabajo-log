@@ -444,6 +444,7 @@
   opacity: 0;
   transition: all .4s ease;
 }
+
 table th, table td {
   text-align: center;
   vertical-align: middle;
@@ -468,3 +469,5 @@ hr {
     transform: translateY(0);
   }
 }
+
+

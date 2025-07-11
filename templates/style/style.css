@@ -1,0 +1,470 @@
+.mi-login-form * {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mi-login-form {
+  background:
+    linear-gradient(
+      rgba(246,247,249,0.8),
+      rgba(246,247,249,0.8)),
+    url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/sky-clouds-cloudy-mountain.jpg) no-repeat center center fixed;
+  background-size: cover;
+  padding-top: 60px;
+  padding-bottom: 100px;
+  width: 100%;
+}
+
+.mi-login-form .frame {
+  height: 575px;
+  width: 430px;
+  background:
+    linear-gradient(
+      rgba(35,43,85,0.75),
+      rgba(35,43,85,0.95)),
+    url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/clouds-cloudy-forest-mountain.jpg) no-repeat center center;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: solid 1px rgba(255,255,255,.5);
+  border-radius: 5px;
+  box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
+  overflow: hidden;
+  transition: all .5s ease;
+}
+
+.mi-login-form .frame-long {
+  height: 615px;
+}
+
+.mi-login-form .frame-short {
+  height: 400px;
+  margin-top: 50px;
+  box-shadow: 0px 2px 7px rgba(0,0,0,0.1);
+}
+
+.mi-login-form .nav {
+  width: 100%;
+  height: 100px;
+  padding-top: 40px;
+  opacity: 1;
+  transition: all .5s ease;
+}
+
+.mi-login-form .nav-up {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
+.mi-login-form li {
+  padding-left: 10px;
+  font-size: 18px;
+  display: inline;
+  text-align: left;
+  text-transform: uppercase;
+  padding-right: 10px;
+  color: #ffffff;
+}
+
+.mi-login-form .signin-active a {
+  padding-bottom: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: solid 2px #1059FF;
+  transition: all .25s ease;
+  cursor: pointer;
+}
+
+.mi-login-form .signin-inactive a {
+  padding-bottom: 0;
+  color: rgba(255,255,255,.3);
+  text-decoration: none;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.mi-login-form .signup-active a {
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: solid 2px #1059FF;
+  padding-bottom: 10px;
+}
+
+.mi-login-form .signup-inactive a {
+  cursor: pointer;
+  color: rgba(255,255,255,.3);
+  text-decoration: none;
+  transition: all .25s ease;
+}
+
+.mi-login-form .form-signin {
+  width: 430px;
+  height: 375px;
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 37px;
+  padding-right: 37px;
+  padding-top: 55px;
+  transition: opacity .5s ease, transform .5s ease;
+}
+
+.mi-login-form .form-signin-left {
+  transform: translateX(-400px);
+  opacity: 0;
+}
+
+.mi-login-form .form-signup {
+  width: 430px;
+  height: 375px;
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 37px;
+  padding-right: 37px;
+  padding-top: 55px;
+  position: relative;
+  top: -375px;
+  left: 400px;
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+.mi-login-form .form-signup-left {
+  transform: translateX(-399px);
+  opacity: 1;
+}
+
+.mi-login-form .form-signup-down {
+  top: 0px;
+  opacity: 0;
+}
+
+.mi-login-form .success {
+  width: 80%;
+  height: 150px;
+  text-align: center;
+  position: relative;
+  top: -890px;
+  left: 450px;
+  opacity: 0;
+  transition: all .8s .4s ease;
+}
+
+.mi-login-form .success-left {
+  transform: translateX(-406px);
+  opacity: 1;
+}
+
+.mi-login-form .successtext {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: -35px;
+  padding-left: 37px;
+  padding-right: 37px;
+}
+
+.mi-login-form #check path {
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: .85px;
+  stroke-dasharray: 60px 300px;
+  stroke-dashoffset: -166px;
+  fill: rgba(255,255,255,0);
+  transition: stroke-dashoffset 2s ease .5s, fill 1.5s ease 1.0s;
+}
+
+.mi-login-form #check.checked path {
+  stroke-dashoffset: 33px;
+  fill: rgba(255,255,255,.03);
+}
+
+.mi-login-form .form-signin input, 
+.mi-login-form .form-signup input {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.mi-login-form .form-styling {
+  width: 100%;
+  height: 35px;
+  padding-left: 15px;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  background: rgba(255,255,255,.2);
+}
+
+.mi-login-form label {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  color: rgba(255,255,255,.7);
+  display: block;
+}
+
+.mi-login-form :focus {
+  outline: none;
+}
+
+.mi-login-form .form-signin input:focus, 
+.mi-login-form textarea:focus, 
+.mi-login-form .form-signup input:focus, 
+.mi-login-form textarea:focus {
+  background: rgba(255,255,255,.3);
+  border: none; 
+  padding-right: 40px;
+  transition: background .5s ease;
+}
+
+.mi-login-form [type="checkbox"]:not(:checked),
+.mi-login-form [type="checkbox"]:checked {
+  position: absolute;
+  display: none;
+}
+
+.mi-login-form [type="checkbox"]:not(:checked) + label,
+.mi-login-form [type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 85px;
+  padding-top: 2px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.mi-login-form [type="checkbox"]:not(:checked) + label:before,
+.mi-login-form [type="checkbox"]:checked + label:before,
+.mi-login-form [type="checkbox"]:not(:checked) + label:after,
+.mi-login-form [type="checkbox"]:checked + label:after {
+  content: '';
+  position: absolute;
+}
+
+.mi-login-form [type="checkbox"]:not(:checked) + label:before,
+.mi-login-form [type="checkbox"]:checked + label:before {
+  width: 65px; 
+  height: 30px;
+  background: rgba(255,255,255,.2);
+  border-radius: 15px;
+  left: 0; 
+  top: -3px;
+  transition: all .2s ease;
+}
+
+.mi-login-form [type="checkbox"]:not(:checked) + label:after,
+.mi-login-form [type="checkbox"]:checked + label:after {
+  width: 10px; 
+  height: 10px;
+  background: rgba(255,255,255,.7);
+  border-radius: 50%;
+  top: 7px; 
+  left: 10px;
+  transition: all .2s ease;
+}
+
+.mi-login-form /* on checked */ [type="checkbox"]:checked + label:before {
+  background: #0F4FE6; 
+}
+
+.mi-login-form [type="checkbox"]:checked + label:after {
+  background: #ffffff;
+  top: 7px; 
+  left: 45px;
+}
+
+.mi-login-form [type="checkbox"]:checked + label .ui,
+.mi-login-form [type="checkbox"]:not(:checked) + label .ui:before,
+.mi-login-form [type="checkbox"]:checked + label .ui:after {
+  position: absolute;
+  left: 6px;
+  width: 65px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 22px;
+  transition: all .2s ease;
+}
+
+.mi-login-form [type="checkbox"]:not(:checked) + label .ui:before {
+  content: "no";
+  left: 32px;
+  color: rgba(255,255,255,.7);
+}
+
+.mi-login-form [type="checkbox"]:checked + label .ui:after {
+  content: "yes";
+  color: #ffffff;
+}
+
+.mi-login-form [type="checkbox"]:focus + label:before {
+  box-sizing: border-box;
+  margin-top: -1px;
+}
+
+.mi-login-form .btn-signup {
+  float: left;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 8px;
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 20px;
+  margin-top: 23px;
+  background-color: #1059FF;
+}
+
+.mi-login-form .btn {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #ffffff;
+  width: 150px;
+  height: 35px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #1059FF;
+  margin-top: 40px;
+  transition: all .4s ease;
+}
+
+.mi-login-form .btn.idle:hover {
+  background-color: #0735fa;
+  transition: all .4s ease;
+}
+
+.mi-login-form .btn:focus {
+  outline: none;
+}
+
+.mi-login-form .btn-animate {
+  width: 150px;
+  height: 35px;
+  background: #1059FF;
+  border-radius: 20px;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: all .4s ease;
+}
+
+.mi-login-form .btn-animate-grow {
+  width: 250px;
+  transition: all .4s ease;
+}
+
+.mi-login-form .btn-goback {
+  background: none;
+  border: none;
+  font-weight: 700;
+  color: #1059FF;
+  cursor: pointer;
+  position: relative;
+  top: 20px;
+  left: -300px;
+  font-size: 12px;
+  text-transform: uppercase;
+  transition: all .4s ease;
+}
+
+.mi-login-form .btn-goback-up {
+  left: 0px;
+  transition: all .4s ease;
+}
+
+.mi-login-form .welcome {
+  font-weight: 300;
+  font-size: 30px;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  transition: all .5s ease;
+}
+
+.mi-login-form .welcome-left {
+  transform: translateX(-200px);
+}
+
+.mi-login-form .profile-photo {
+  position: relative;
+  left: 40px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 100px;
+  transition: all .4s ease;
+}
+
+.mi-login-form .profile-photo-down {
+  top: 100px;
+  opacity: 0;
+  transition: all .4s ease;
+}
+
+.mi-login-form .cover-photo {
+  width: 400px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px 5px 0 0;
+  transition: all .4s ease;
+  background: url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/clouds-cloudy-forest-mountain.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.mi-login-form .cover-photo-down {
+  opacity: 0;
+  transition: all .4s ease;
+}
+
+.mi-login-form .forgot {
+  font-size: 12px;
+  color: rgba(255,255,255,.7);
+  margin-top: 10px;
+  transition: all .4s ease;
+  cursor: pointer;
+}
+
+.mi-login-form .forgot-left {
+  transform: translateX(-350px);
+}
+
+.mi-login-form .forgot-fade {
+  opacity: 0;
+  transition: all .4s ease;
+}
+table th, table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+hr {
+  margin: 40px 0;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out forwards;
+  opacity: 0; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

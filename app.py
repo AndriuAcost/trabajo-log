@@ -4,15 +4,18 @@ import os
 import bcrypt
 import hashlib
 import base64
+from dotenv import load_dotenv
+
+load_dotenv()  # Carga las variables desde .env
 
 app = Flask(__name__)
-app.secret_key = 'clave-secreta-supersegura'
+app.secret_key = os.getenv('FLASK_SECRET_KEY', 'clave-secreta-por-defecto')
 
-DB_NAME = 'app.db'
+DB_NAME = os.getenv('DB_NAME', 'app.db')
 
-# Parámetros para ofuscación reversible
-RUT_SALT = b'mi_salt_superseguro'
-RUT_PEPPER = b'mi_pepper_supersecreto'
+# Parámetros para ofuscación reversible, obtenidos desde .env y codificados a bytes
+RUT_SALT = os.getenv('RUT_SALT', 'mi_salt_superseguro').encode('utf-8')
+RUT_PEPPER = os.getenv('RUT_PEPPER', 'mi_pepper_supersecreto').encode('utf-8')
 
 def xor_bytes(data: bytes, key: bytes) -> bytes:
     return bytes([b ^ key[i % len(key)] for i, b in enumerate(data)])
